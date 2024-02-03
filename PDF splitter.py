@@ -2,7 +2,7 @@ import sys
 import copy
 import os
 from PyPDF2 import PdfWriter, PdfReader
-from PyQt6.QtWidgets import QApplication, QWidget
+from PyQt6.QtWidgets import QApplication, QMainWindow
 
 def crop_and_duplicate(input_path, output_path):
 	with open(input_path, "rb") as pdf1:
@@ -26,14 +26,18 @@ def command_line_call():
 		input_pdf = input("Enter pdf location:\n")
 		if os.path.isfile(input_pdf):
 			break
-		print("File does not exist, try again", file=sys.stderr)
+		print("File does not exist, try again", file = sys.stderr)
 		
 	output_pdf = input_pdf[:-4] + "_splitted.pdf"
 	crop_and_duplicate(input_pdf, output_pdf)
 
 if __name__ == "__main__":
 	app = QApplication(sys.argv)
-	window = QWidget()
+	window = QMainWindow(windowTitle = "EBook Manager")
+	menu_bar = window.menuBar()
+	menu_bar.addMenu("&File")
+	menu_bar.addMenu("&Edit")
+	menu_bar.addMenu("&Help")
 	window.show()
 	sys.exit(app.exec())
 	
