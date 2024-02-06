@@ -18,7 +18,7 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QTransform)
 from PySide6.QtWidgets import (QApplication, QHeaderView, QMainWindow, QMenu,
     QMenuBar, QSizePolicy, QStatusBar, QTableWidget,
-    QTableWidgetItem, QVBoxLayout, QWidget)
+    QTableWidgetItem, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -31,13 +31,9 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName(u"centralwidget")
         self.tw_books = QTableWidget(self.centralwidget)
         self.tw_books.setObjectName(u"tw_books")
-        self.tw_books.setGeometry(QRect(30, 20, 561, 521))
-        self.verticalLayoutWidget = QWidget(self.centralwidget)
-        self.verticalLayoutWidget.setObjectName(u"verticalLayoutWidget")
-        self.verticalLayoutWidget.setGeometry(QRect(620, 20, 160, 521))
-        self.verticalLayout = QVBoxLayout(self.verticalLayoutWidget)
-        self.verticalLayout.setObjectName(u"verticalLayout")
-        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.tw_books.setGeometry(QRect(50, 20, 711, 521))
+        self.tw_books.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
+        self.tw_books.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")

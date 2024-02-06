@@ -17,7 +17,7 @@ from PySide6.QtUiTools import QUiLoader
 
 def mainwindow_setup(window):
     table_widget = window.tw_books
-    table_widget.setColumnCount(5)
+    table_widget.setColumnCount(7)
 
     data = [
                 ['Item 1-1', 'Item 1-2', 'Item 1-3'],
@@ -25,7 +25,7 @@ def mainwindow_setup(window):
                 ['Item 3-1', 'Item 3-2', 'Item 3-3']
             ]
 
-    table_widget.setHorizontalHeaderLabels(["On PC", "On device", "Author", "Title", "Year"])
+    table_widget.setHorizontalHeaderLabels(["On PC", "On device", "Author", "Title", "Year", "Size", "Publisher"])
 
     for row_data in data:
         row_position = table_widget.rowCount()
