@@ -16,60 +16,28 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QIcon, QImage, QKeySequence, QLinearGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
-from PySide6.QtWidgets import (QApplication, QHeaderView, QLabel, QMainWindow,
-    QMenu, QMenuBar, QPlainTextEdit, QPushButton,
-    QSizePolicy, QStatusBar, QTableWidget, QTableWidgetItem,
-    QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QHeaderView, QMainWindow, QMenu,
+    QMenuBar, QSizePolicy, QStatusBar, QTableWidget,
+    QTableWidgetItem, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
+        MainWindow.resize(800, 600)
         MainWindow.setMinimumSize(QSize(800, 600))
         MainWindow.setMaximumSize(QSize(800, 600))
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.tableWidget = QTableWidget(self.centralwidget)
-        self.tableWidget.setObjectName(u"tableWidget")
-        self.tableWidget.setGeometry(QRect(30, 20, 381, 521))
+        self.tw_books = QTableWidget(self.centralwidget)
+        self.tw_books.setObjectName(u"tw_books")
+        self.tw_books.setGeometry(QRect(30, 20, 561, 521))
         self.verticalLayoutWidget = QWidget(self.centralwidget)
         self.verticalLayoutWidget.setObjectName(u"verticalLayoutWidget")
-        self.verticalLayoutWidget.setGeometry(QRect(449, 20, 321, 261))
+        self.verticalLayoutWidget.setGeometry(QRect(620, 20, 160, 521))
         self.verticalLayout = QVBoxLayout(self.verticalLayoutWidget)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayoutWidget_2 = QWidget(self.centralwidget)
-        self.verticalLayoutWidget_2.setObjectName(u"verticalLayoutWidget_2")
-        self.verticalLayoutWidget_2.setGeometry(QRect(450, 290, 321, 261))
-        self.verticalLayout_2 = QVBoxLayout(self.verticalLayoutWidget_2)
-        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.label = QLabel(self.verticalLayoutWidget_2)
-        self.label.setObjectName(u"label")
-        self.label.setAlignment(Qt.AlignHCenter|Qt.AlignTop)
-
-        self.verticalLayout_2.addWidget(self.label, 0, Qt.AlignVCenter)
-
-        self.pb_browse = QPushButton(self.verticalLayoutWidget_2)
-        self.pb_browse.setObjectName(u"pb_browse")
-        self.pb_browse.setMinimumSize(QSize(100, 25))
-        self.pb_browse.setMaximumSize(QSize(100, 25))
-
-        self.verticalLayout_2.addWidget(self.pb_browse, 0, Qt.AlignHCenter|Qt.AlignVCenter)
-
-        self.plainTextEdit = QPlainTextEdit(self.verticalLayoutWidget_2)
-        self.plainTextEdit.setObjectName(u"plainTextEdit")
-        self.plainTextEdit.setMaximumSize(QSize(200, 25))
-        self.plainTextEdit.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.plainTextEdit.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-
-        self.verticalLayout_2.addWidget(self.plainTextEdit, 0, Qt.AlignHCenter|Qt.AlignVCenter)
-
-        self.lb_work_done = QLabel(self.verticalLayoutWidget_2)
-        self.lb_work_done.setObjectName(u"lb_work_done")
-
-        self.verticalLayout_2.addWidget(self.lb_work_done, 0, Qt.AlignHCenter|Qt.AlignVCenter)
-
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
@@ -96,10 +64,6 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"EBook Manager", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"Split PDF", None))
-        self.pb_browse.setText(QCoreApplication.translate("MainWindow", u"Browse", None))
-        self.plainTextEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Enter output filename", None))
-        self.lb_work_done.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
         self.menuEdit.setTitle(QCoreApplication.translate("MainWindow", u"Edit", None))
         self.menuHelp.setTitle(QCoreApplication.translate("MainWindow", u"Help", None))

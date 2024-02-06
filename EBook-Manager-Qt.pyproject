@@ -2,6 +2,7 @@
     "files": [
         "mainwindow.py",
         "form.ui",
-        "PDF_splitter.py"
+        "PDF_splitter.py",
+        "converter.ui"
     ]
 }
