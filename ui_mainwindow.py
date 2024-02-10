@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'form.ui'
+## Form generated from reading UI file 'mainwindow.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.6.1
 ##
@@ -17,12 +17,14 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
 from PySide6.QtWidgets import (QApplication, QLabel, QMainWindow, QMenu,
-    QMenuBar, QSizePolicy, QStatusBar, QWidget)
+    QMenuBar, QPushButton, QSizePolicy, QStatusBar,
+    QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
+        MainWindow.resize(800, 600)
         MainWindow.setMinimumSize(QSize(800, 600))
         MainWindow.setMaximumSize(QSize(800, 600))
         self.centralwidget = QWidget(MainWindow)
@@ -36,6 +38,9 @@ class Ui_MainWindow(object):
         self.label_3 = QLabel(self.centralwidget)
         self.label_3.setObjectName(u"label_3")
         self.label_3.setGeometry(QRect(660, 410, 67, 17))
+        self.pushButton = QPushButton(self.centralwidget)
+        self.pushButton.setObjectName(u"pushButton")
+        self.pushButton.setGeometry(QRect(480, 230, 89, 25))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
@@ -65,6 +70,7 @@ class Ui_MainWindow(object):
         self.label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
         self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
         self.menuEdit.setTitle(QCoreApplication.translate("MainWindow", u"Edit", None))
         self.menuHel.setTitle(QCoreApplication.translate("MainWindow", u"Help", None))

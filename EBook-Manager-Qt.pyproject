@@ -1,7 +1,7 @@
 {
     "files": [
         "mainwindow.py",
-        "form.ui",
+        "mainwindow.ui",
         "PDF_splitter.py"
     ]
 }
